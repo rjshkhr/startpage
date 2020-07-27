@@ -23,7 +23,7 @@ body {
     margin: 3em;
     height: 6.3em;
     width: 5em;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 8px 8px rgba(0, 0, 0, 0.2);
 }
 
 a, a:visited {
@@ -31,9 +31,10 @@ a, a:visited {
     text-decoration: none;
 }
 
-header {    
+header {
     padding-bottom: 8px;
     font-weight:bold;
+    cursor: pointer;
 }
 
 .social a:hover, .social header {
@@ -45,5 +46,5 @@ header {
 }
 
 .other a:hover, .other header {
-        color: #3C97AD;
+    color: #3C97AD;
 }
