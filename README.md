@@ -1,2 +1,2 @@
 ## <p align="center">Preview</p>
-![screenshot](startpage.jpg)
+![screenshot](startpage.png)
