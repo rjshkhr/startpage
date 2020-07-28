@@ -5,6 +5,18 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <!-- New content -->
+        <div id="box2">
+            <h1>Bienvenido Pedro Cano</h1>
+        </div>
+        <div class="searcher">
+            <input type="text" name="" id="Blah" placeholder="Buscar Con Google">
+        </div>
+        <div class="searcher">
+            <button class="buttonSearch" onclick="search()">Buscar</button>
+        </div>
+        <!-- End New Content -->
+
         <div id="box">
             <div class="container">
                 <div class="social">
@@ -34,5 +46,13 @@
                 </div>
             </div>
         </div>
+        <!-- New Content -->
+        <script>
+        function search() {
+        var Blah = document.getElementById("Blah").value;
+        location.replace("https://www.google.com/search?q=" + Blah + "");
+        }
+        </script>
+        <!-- End New Content -->
     </body>
 </html>
