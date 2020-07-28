@@ -1,50 +1,104 @@
+/* Cange Color PlaceHolder */
+    ::-webkit-input-placeholder { color: #3C97AD; } 
+
+    :-moz-placeholder { /* Firefox 18- */ color: #3C97AD; } 
+    
+    ::-moz-placeholder { /* Firefox 19+ */ color: #3C97AD; text-align: center; font-size: 1.5em; } 
+    
+    :-ms-input-placeholder { color: #3C97AD; }
+/* Cange Color PlaceHolder */
+
 *{
-    margin:0;
-    padding:0;
-}
+        margin:0;
+        padding:0;
+    }
+    
+    body {
+        background-color: #232731;
+            color: #9faab8;
+        font-family: 'JetBrainsMono Nerd Font', Helvetica, sans-serif;
+    }
+    
+    #box {
+        height: 20em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
-body {
-    background-color: #232731;
-	color: #9faab8;
-    font-family: 'Neep', Helvetica, sans-serif;
-}
+    #box2 {
+        height: 5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 2.5em;
+        margin-bottom: 2.5em;
+    }
+    .searcher{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
-#box {
-    height: 40em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+    input {
+        background-color: #232731;
+        height: 3em;
+        width: 50em;
+        border-radius: 5px;
+        border-color: #3C97AD;
+        margin-bottom: 2em;
+        color: #3C97AD;
+        text-align: center;
+        font-size: 1em;
+    }
 
-.container {
-    background-color: #2F3542;
-    padding: 3em;
-    margin: 3em;
-    height: 6.3em;
-    width: 5em;
-    box-shadow: 8px 8px rgba(0, 0, 0, 0.2);
-}
+    .buttonSearch{
+            background-color: #232731;
+            color: #3C97AD;
+            height: 3em;
+            width: 15em;
+            border-color: #3C97AD;
+            border-radius: 5px;
+            cursor:pointer;
+    }
 
-a, a:visited {
-    color: #9faab8;
-    text-decoration: none;
-}
-
-header {
-    padding-bottom: 8px;
-    font-weight:bold;
-    cursor: pointer;
-}
-
-.social a:hover, .social header {
-    color: #CC6D8B;
-}
-
-.dev a:hover, .dev header {
-    color: #469E76;
-}
-
-.other a:hover, .other header {
-    color: #3C97AD;
-}
+    .botonBuscar:hover{
+          background-color: #3C97AD; 
+          color: #232731;
+          border-color: #3C97AD; 
+    }
+    
+    .container {
+        background-color: #2F3542;
+        padding: 3em;
+        margin: 3em;
+        height: 6.3em;
+        width: 5em;
+        box-shadow: 8px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    a, a:visited {
+        color: #9faab8;
+        text-decoration: none;
+    }
+    
+    header {
+        padding-bottom: 8px;
+        font-weight:bold;
+        cursor: pointer;
+    }
+    
+    .social a:hover, .social header {
+        color: #CC6D8B;
+    }
+    
+    .dev a:hover, .dev header {
+        color: #469E76;
+    }
+    
+    .other a:hover, .other header {
+        color: #3C97AD;
+    }
