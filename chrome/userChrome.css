@@ -1,0 +1,90 @@
+:root {
+    --faint-bg: #232731;
+    --faint-bg-alt: #2f3542;
+    --faint-fg: #9faab8;
+    --urlbar-separator-color: taransparent !important;
+}
+
+panelview, .panel-arrowcontent, scrollbox {
+    background-color: var(--faint-bg) !important;
+    color: var(--faint-fg) !important;
+}
+
+#urlbar-input-container {
+    background-color: var(--faint-bg-alt) !important;
+    color: var(--faint-fg) !important;
+}
+
+#urlbar-input-container, #searchbar {
+    border-radius: 0px;
+}
+
+.chromeclass-toolbar-additional {
+    background-color: var(--faint-bg);
+    color: var(--faint-fg);
+}
+
+#urlbar, .urlbarView-body-inner {
+    border: none !important;
+}
+
+#PanelUI-button {
+    background-color: var(--faint-bg);
+    color: var(--faint-fg);
+    border: none !important;
+}
+
+#urlbar-background, #searchbar {
+    background-color: var(--faint-bg-alt) !important;
+    color: var(--faint-fg) !important;
+    border: none !important;
+    box-shadow: none;
+}
+
+#navigator-toolbox {
+    border-bottom-width: 0px !important;
+}
+
+toolbarseparator {
+    display: none;
+}
+
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+    border-left: none !important;
+}
+
+.tab-line {
+    height:100% !important
+}
+
+.tabs-newtab-button:hover, .tabbrowser-tab:hover:not([selected]), .tabbrowser-tab[selected] {
+    color: var(--faint-fg) !important;
+    background-color: var(--faint-bg-alt) !important;
+}
+
+.tab-background {
+	background: transparent !important;
+}
+
+#library-button {
+    background-color: var(--faint-bg);
+}
+
+#nav-bar{ box-shadow: none !important }
+
+#urlbar-container, #search-container {
+    background-color: var(--faint-bg);
+}
+
+#nav-bar-customization-target {
+    background-color: var(--faint-bg);
+}
+:root:not([uidensity=compact]):not([chromehidden~="toolbar"]) #PanelUI-button {
+  margin-inline-start: 0px;
+  border-image-slice: none;
+}
+
+.browser-toolbar {
+    color: var(--faint-fg) !important;
+    -moz-appearance: -moz-window-titlebar-maximized !important;
+}
