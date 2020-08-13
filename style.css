@@ -10,17 +10,16 @@ body {
 }
 
 #box {
-    height: 40em;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .container {
     background-color: #2F3542;
     padding: 3em;
-    margin: 3em;
+    margin: 3%;
     height: 6.3em;
     width: 5em;
     box-shadow: 8px 8px rgba(0, 0, 0, 0.2);
@@ -47,4 +46,11 @@ header {
 
 .other a:hover, .other header {
     color: #3C97AD;
+}
+
+@media (max-width:620px) {
+    .container {
+        padding: 2em;
+        margin: 0;
+    }
 }
