@@ -3,10 +3,80 @@
     padding:0;
 }
 
+:root {
+    --bg-dark: #2f3842;
+    --bg-dark2: #3E4751;
+    --bg-light: url(cool-background.png);
+    --bg-light2: #f9f9f9;
+    --fg-dark: #f2f2f4;
+    --fg-light: #6f798c;
+    --green: #96bb7f;
+    --blue: #6f97ec;
+    --red: #ec866f;
+    --link-hover-timing: all 0.25s ease-in-out;
+    --theme-change-timing: all 1s ease-in-out;
+    --fonts: 'jmk Neep', Helvetica, sans-serif;
+}
+
+.dark {
+    background-color: var(--bg-dark);
+    color: var(--fg-dark);
+
+}
+
+.dark a, .dark a:visited {
+    color: var(--fg-dark);
+}
+
+.dark .container {
+    background-color: var(--bg-dark2);
+}
+
+.light {
+    background-image: var(--bg-light);
+    color: var(--fg-light);
+}
+
+.light a, .light a:visited {
+    color: var(--fg-light);
+}
+
+.light .container {
+    background-color: var(--bg-light2);
+}
+
+
 body {
-    background-color: #232731;
-	color: #9faab8;
-    font-family: 'jmk Neep', Helvetica, sans-serif;
+    font-family: var(--fonts);
+    transition: all 0.5s ease
+}
+
+button {
+    border: none;
+    position: absolute;
+    margin: 2em 2em 0 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    right: 0;
+    padding: 0.6em 1.2em;
+    cursor: pointer;
+    color: var(--fg-dark);
+    font-family: var(--fonts);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.dark button {
+    background-color: var(--green);
+}
+
+.light button {
+    background-color: var(--blue);
+}
+
+button:hover {
+    background-color: var(--red);
 }
 
 #box {
@@ -17,7 +87,6 @@ body {
 }
 
 .container {
-    background-color: #2F3542;
     padding: 3em;
     margin: 3%;
     height: 6.3em;
@@ -26,7 +95,6 @@ body {
 }
 
 a, a:visited {
-    color: #9faab8;
     text-decoration: none;
 }
 
@@ -37,15 +105,15 @@ header {
 }
 
 .social a:hover, .social header {
-    color: #CC6D8B;
+    color: var(--red);
 }
 
 .dev a:hover, .dev header {
-    color: #469E76;
+    color: var(--green);
 }
 
 .other a:hover, .other header {
-    color: #3C97AD;
+    color: var(--blue);
 }
 
 @media (max-width:620px) {
