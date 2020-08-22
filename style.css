@@ -4,15 +4,16 @@
 }
 
 :root {
-    --bg-dark: #2f3842;
-    --bg-dark2: #3E4751;
+    --bg-dark: #22272a;
+    --bg-dark2: #2c3134;
     --bg-light: url(cool-background.png);
     --bg-light2: #f9f9f9;
     --fg-dark: #f2f2f4;
     --fg-light: #6f798c;
-    --green: #96bb7f;
+    --green: #2CC46E;
     --blue: #6f97ec;
-    --red: #ec866f;
+    --red: #ef4b4b;
+    --yellow: #ECC46F;
     --link-hover-timing: all 0.25s ease-in-out;
     --theme-change-timing: all 1s ease-in-out;
     --fonts: 'jmk Neep', Helvetica, sans-serif;
@@ -68,7 +69,8 @@ button {
 }
 
 .dark button {
-    background-color: var(--green);
+    background-color: var(--yellow);
+    color: var(--bg-dark);
 }
 
 .light button {
@@ -109,7 +111,7 @@ header {
 }
 
 .dev a:hover, .dev header {
-    color: var(--green);
+    color: var(--yellow);
 }
 
 .other a:hover, .other header {
