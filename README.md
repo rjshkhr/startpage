@@ -13,3 +13,5 @@
 5. Replace file location of index.html in newTabURL variable
 6. Copy mozilla.cfg to /usr/lib/firefox/
 7. Copy local-settings.js to /usr/lib/firefox/defaults/pref/
+
+If you can't find /usr/lib/firefox folder, the folder name might be different, for firefox nightly it is /usr/lib/firefox-trunk. It might even be /usr/lib64/firefox, make sure the folder exist and it contains defaults/pref folder.
