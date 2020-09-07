@@ -17,6 +17,7 @@ toggleTheme.addEventListener('click', function() {
 });
 
 function getTheme() {
+
     body.classList.add(theme)
     toggleTheme.textContent = theme;
 }

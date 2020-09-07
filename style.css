@@ -1,126 +1,127 @@
-*{
-    margin:0;
-    padding:0;
+* {
+	margin: 0;
+	padding: 0;
 }
 
 :root {
-    --bg-dark: #22272a;
-    --bg-dark2: #2c3134;
-    --bg-light: url(cool-background.png);
-    --bg-light2: #f9f9f9;
-    --fg-dark: #f2f2f4;
-    --fg-light: #6f798c;
-    --green: #2CC46E;
-    --blue: #6f97ec;
-    --red: #ef4b4b;
-    --yellow: #ECC46F;
-    --link-hover-timing: all 0.25s ease-in-out;
-    --theme-change-timing: all 1s ease-in-out;
-    --fonts: 'jmk Neep', Helvetica, sans-serif;
+	--bg-dark: #232a33;
+	--bg-dark2: #2d343d;
+	--bg-light: url(cool-background.png);
+	--bg-light2: #f9f9f9;
+	--fg-dark: #fcfcfc;
+	--fg-light: #6f798c;
+	--green: #2cc46e;
+	--blue: #6f97ec;
+	--red: #ef4b4b;
+	--yellow: #ecc46f;
+	--fonts: 'xos4 Terminus', sans-serif;
 }
 
 .dark {
-    background-color: var(--bg-dark);
-    color: var(--fg-dark);
-
+	background-color: var(--bg-dark);
+	color: var(--fg-dark);
 }
 
-.dark a, .dark a:visited {
-    color: var(--fg-dark);
+.dark a,
+.dark a:visited {
+	color: var(--fg-dark);
 }
 
 .dark .container {
-    background-color: var(--bg-dark2);
+	background-color: var(--bg-dark2);
 }
 
 .light {
-    background-image: var(--bg-light);
-    color: var(--fg-light);
+	background-image: var(--bg-light);
+	color: var(--fg-light);
 }
 
-.light a, .light a:visited {
-    color: var(--fg-light);
+.light a,
+.light a:visited {
+	color: var(--fg-light);
 }
 
 .light .container {
-    background-color: var(--bg-light2);
+	background-color: var(--bg-light2);
 }
 
-
 body {
-    font-family: var(--fonts);
-    transition: all 0.5s ease
+	font-family: var(--fonts);
 }
 
 button {
-    border: none;
-    position: absolute;
-    margin: 2em 2em 0 0;
-    font-size: 12px;
-    text-transform: uppercase;
-    right: 0;
-    padding: 0.6em 1.2em;
-    cursor: pointer;
-    color: var(--fg-dark);
-    font-family: var(--fonts);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    -webkit-appearance: none;
-    -moz-appearance: none;
+	border: none;
+	position: absolute;
+	margin: 2em 2em 0 0;
+	font-size: 12px;
+	text-transform: uppercase;
+	right: 0;
+	padding: 0.7em 1.4em;
+	cursor: pointer;
+	color: var(--fg-dark);
+	font-family: var(--fonts);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	-webkit-appearance: none;
+	-moz-appearance: none;
 }
 
 .dark button {
-    background-color: var(--yellow);
-    color: var(--bg-dark);
+	background-color: var(--yellow);
+	color: var(--bg-dark);
 }
 
 .light button {
-    background-color: var(--blue);
+	background-color: var(--blue);
 }
 
 button:hover {
-    background-color: var(--red);
+	background-color: var(--red);
 }
 
 #box {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .container {
-    padding: 3em;
-    margin: 3%;
-    height: 6.3em;
-    width: 5em;
-    box-shadow: 8px 8px rgba(0, 0, 0, 0.2);
+	padding: 3em;
+	margin: 3%;
+	height: 6.3em;
+	width: 5em;
+	box-shadow: 8px 8px rgba(0, 0, 0, 0.2);
 }
 
-a, a:visited {
-    text-decoration: none;
+a,
+a:visited {
+	text-decoration: none;
 }
 
 header {
-    padding-bottom: 8px;
-    font-weight:bold;
-    cursor: pointer;
+	padding-bottom: 8px;
+	font-weight: bold;
+	cursor: pointer;
 }
 
-.social a:hover, .social header {
-    color: var(--red);
+.social a:hover,
+.social header {
+	color: var(--red);
 }
 
-.dev a:hover, .dev header {
-    color: var(--yellow);
+.dev a:hover,
+.dev header {
+	color: var(--yellow);
 }
 
-.other a:hover, .other header {
-    color: var(--blue);
+.other a:hover,
+.other header {
+	color: var(--blue);
 }
 
-@media (max-width:620px) {
-    .container {
-        padding: 2em;
-        margin: 0;
-    }
+@media (max-width: 620px) {
+	.container {
+		padding: 2em;
+		margin: 0;
+	}
 }
