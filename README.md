@@ -1,6 +1,6 @@
 ## <p align="center">Preview</p>
-![screenshot](startpage.png)
-![screenshot](startpage-light.png)
+![screenshot](firefox.png)
+![screenshot](firefox-light.png)
 
 ## <p align="center">Installation</p>
 
