@@ -4,15 +4,16 @@
 }
 
 :root {
-	--bg-dark: #22272c;
-	--bg-dark2: #2c3136;
-	--bg-light: url(cool-background.png);
+	--bg-dark: #242c38;
+	--bg-dark2: #333b47;
+	--bg-light: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 	--bg-light2: #f9f9f9;
 	--fg-dark: #fcfcfc;
 	--fg-light: #6f798c;
 	--green: #2cc46e;
 	--blue: #6f97ec;
 	--red: #ef4b4b;
+	--magenta: #fa5477;
 	--yellow: #ecc46f;
 	--fonts: 'xos4 Terminus', sans-serif;
 }
@@ -66,16 +67,16 @@ button {
 }
 
 .dark button {
-	background-color: var(--yellow);
+	background-color: var(--blue);
 	color: var(--bg-dark);
 }
 
 .light button {
-	background-color: var(--blue);
+	background-color: var(--magenta);
 }
 
 button:hover {
-	background-color: var(--red);
+	background-color: var(--yellow);
 }
 
 #box {
@@ -106,7 +107,7 @@ header {
 
 .social a:hover,
 .social header {
-	color: var(--red);
+	color: var(--magenta);
 }
 
 .dev a:hover,
