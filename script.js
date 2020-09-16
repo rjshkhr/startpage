@@ -4,7 +4,7 @@ let body = document.body;
 let theme = localStorage.getItem('theme');
 let toggleTheme = document.getElementById('toggleTheme');
 
-toggleTheme.addEventListener('click', function () {
+toggleTheme.addEventListener('click', () => {
 	if (body.classList.contains('light')) {
 		body.classList.remove('light');
 		toggleTheme.textContent = 'Dark';
@@ -16,8 +16,8 @@ toggleTheme.addEventListener('click', function () {
 	}
 });
 
-function getTheme() {
+const getTheme = () => {
 	body.classList.add(theme);
 	toggleTheme.textContent = theme;
-}
+};
 getTheme();

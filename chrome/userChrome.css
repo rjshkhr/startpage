@@ -1,8 +1,9 @@
 :root {
-	--faint-bg: #242c38;
-	--faint-bg-alt: #333b47;
+	--faint-bg: #2f3846;
+	--faint-bg-alt: #434c5a;
 	--faint-fg: #f2f2f4;
 	--urlbar-separator-color: taransparent !important;
+	--toolbarbutton-border-radius: 12px !important;
 }
 
 panelview,
@@ -15,11 +16,6 @@ scrollbox {
 #urlbar-input-container {
 	background-color: var(--faint-bg-alt) !important;
 	color: var(--faint-fg) !important;
-}
-
-#urlbar-input-container,
-#searchbar {
-	border-radius: 0px;
 }
 
 .chromeclass-toolbar-additional {
@@ -54,6 +50,10 @@ toolbarseparator {
 	display: none;
 }
 
+.tabbrowser-tab {
+	border-radius: 15px !important;
+}
+
 .tabbrowser-tab::after,
 .tabbrowser-tab::before {
 	border-left: none !important;
@@ -68,6 +68,7 @@ toolbarseparator {
 .tabbrowser-tab[selected] {
 	color: var(--faint-fg) !important;
 	background-color: var(--faint-bg-alt) !important;
+	border-radius: 15px;
 }
 
 .tab-background {
@@ -98,5 +99,9 @@ toolbarseparator {
 
 .browser-toolbar {
 	color: var(--faint-fg) !important;
-	-moz-appearance: -moz-window-titlebar-maximized !important;
+}
+
+.browser-toolbar:not(.titlebar-color) {
+	background-color: var(--faint-bg) !important;
+	background-image: none !important;
 }
