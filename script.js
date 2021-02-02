@@ -1,23 +1,25 @@
-let dark = document.getElementById('dark');
-let light = document.getElementById('light');
 let body = document.body;
 let theme = localStorage.getItem('theme');
-let toggleTheme = document.getElementById('toggleTheme');
+let btnTheme = localStorage.getItem('btn-theme');
+let btn = document.querySelector('.btn-theme');
+let btnIcon = document.querySelector('.fas');
 
-toggleTheme.addEventListener('click', () => {
-	if (body.classList.contains('light')) {
-		body.classList.remove('light');
-		toggleTheme.textContent = 'Dark';
-		localStorage.setItem('theme', 'dark');
+btn.addEventListener('click', () => {
+	if (body.classList.contains('body-light')) {
+		body.classList.remove('body-light');
+		btnIcon.classList.remove('fa-sun');
+		localStorage.setItem('theme', 'body-dark');
+		localStorage.setItem('btn-theme', 'fa-moon');
 	} else {
-		body.classList.add('light');
-		toggleTheme.textContent = 'Light';
-		localStorage.setItem('theme', 'light');
+		body.classList.add('body-light');
+		btnIcon.classList.add('fa-sun');
+		localStorage.setItem('theme', 'body-light');
+		localStorage.setItem('btn-theme', 'fa-sun');
 	}
 });
 
 const getTheme = () => {
 	body.classList.add(theme);
-	toggleTheme.textContent = theme;
+	btnIcon.classList.add(btnTheme);
 };
 getTheme();

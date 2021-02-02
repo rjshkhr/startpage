@@ -1,133 +1,112 @@
-* {
-	transition: 0.2s ease-in-out;
-	margin: 0;
-	padding: 0;
-}
-
 :root {
 	--bg-dark: #2f3846;
-	--bg-dark2: #3e4755;
-	--fg-dark: #dfdff2;
-	--bg-light: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-	--bg-light2: #f9f9f9;
-	--fg-light: #6f798c;
+	--bg-container-dark: #3e4755;
+	--fg-dark: #dee;
+	--bg-light: #ddd;
+	--bg-container-light: #eee;
+	--fg-light: #345;
 	--green: #70b791;
 	--magenta: #db8e9d;
 	--yellow: #c9c76b;
 	--cyan: #78b3c5;
-	--font: 'xos4 Terminus', sans-serif;
 }
 
-body {
-	font-family: var(--font);
+* {
+	margin: 0;
+	padding: 0;
+	transition: 0.2s ease-in-out;
 }
 
-.dark {
+.body-dark {
 	background-color: var(--bg-dark);
 	color: var(--fg-dark);
 }
 
-.light {
-	background-image: var(--bg-light);
+.body-light {
+	background-color: var(--bg-light);
 	color: var(--fg-light);
 }
 
-button {
-	color: var(--fg-dark);
-	font-family: var(--font);
-	font-size: 12px;
-	text-transform: uppercase;
-	position: absolute;
-	right: 0;
-	cursor: pointer;
-	margin: 2em 2em 0 0;
-	padding: 0.8em 1.5em;
-	border: none;
-	border-radius: 15px;
-	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-	-moz-appearance: none;
-}
-
-.dark button {
-	background-color: var(--cyan);
-	color: var(--bg-dark);
-}
-
-.light button {
-	background-color: var(--magenta);
-}
-
-button:hover {
-	background-color: var(--yellow);
-}
-
-#box {
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.container {
-	height: 6.3em;
-	width: 5em;
-	padding: 3em;
-	margin: 3%;
-	border-radius: 15px;
-	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-}
-
-.container:hover {
-	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.24);
-}
-
-.dark .container {
-	background-color: var(--bg-dark2);
-}
-
-.light .container {
-	background-color: var(--bg-light2);
-}
-
-header {
-	padding-bottom: 8px;
-	font-weight: bold;
-	cursor: pointer;
-}
-
-a,
-a:visited {
+a {
 	text-decoration: none;
+	padding: 0.1em;
 }
 
-.dark a,
-.dark a:visited {
+.body-dark a {
 	color: var(--fg-dark);
 }
 
-.light a,
-.light a:visited {
+.body-light a {
 	color: var(--fg-light);
 }
 
-.social a:hover,
-.social header {
-	color: var(--magenta);
+.fas {
+	font-size: 1.5rem;
 }
 
-.dev a:hover,
-.dev header {
+.fas:hover {
 	color: var(--yellow);
 }
 
-.other a:hover,
-.other header {
+.btn-theme {
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	margin: 1em;
+}
+
+#box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 6em;
+	padding: 3em;
+	margin: 0 3%;
+	border-radius: 8px;
+	box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.container:hover {
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.body-dark .container {
+	background-color: var(--bg-container-dark);
+}
+
+.body-light .container {
+	background-color: var(--bg-container-light);
+}
+
+.container-header {
+	font-size: 1.1rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	padding-bottom: 0.5em;
+	cursor: pointer;
+}
+
+.social-link:hover {
+	color: var(--green);
+}
+
+.dev-link:hover {
+	color: var(--magenta);
+}
+
+.other-link:hover {
 	color: var(--cyan);
 }
 
 @media (max-width: 620px) {
 	.container {
-		padding: 1.5em;
+		padding: 0.8em;
 		margin: 0;
 		border-radius: 0;
 		box-shadow: none;
