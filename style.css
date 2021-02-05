@@ -1,10 +1,4 @@
 :root {
-	--bg-dark: #2f3846;
-	--bg-container-dark: #3e4755;
-	--fg-dark: #dee;
-	--bg-light: #ddd;
-	--bg-container-light: #eee;
-	--fg-light: #345;
 	--green: #70b791;
 	--magenta: #db8e9d;
 	--yellow: #c9c76b;
@@ -14,30 +8,28 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 	transition: 0.2s ease-in-out;
 }
 
+body {
+	background-color: var(--bg);
+	color: var(--fg);
+	font-family: sans-serif;
+}
+
 .body-dark {
-	background-color: var(--bg-dark);
-	color: var(--fg-dark);
+	--bg: #2f3846;
+	--bg-alt: #3e4755;
+	--fg: #dee;
+	--fg-alt: #fff;
 }
 
 .body-light {
-	background-color: var(--bg-light);
-	color: var(--fg-light);
-}
-
-a {
-	text-decoration: none;
-	padding: 0.1em;
-}
-
-.body-dark a {
-	color: var(--fg-dark);
-}
-
-.body-light a {
-	color: var(--fg-light);
+	--bg: #ddd;
+	--bg-alt: #eee;
+	--fg: #444;
+	--fg-alt: #333;
 }
 
 .fas {
@@ -49,10 +41,10 @@ a {
 }
 
 .btn-theme {
-	cursor: pointer;
 	position: absolute;
 	right: 0;
 	margin: 1em;
+	cursor: pointer;
 }
 
 #box {
@@ -65,48 +57,50 @@ a {
 .container {
 	display: flex;
 	flex-direction: column;
-	width: 6em;
+	align-items: center;
+	width: 12em;
 	padding: 3em;
 	margin: 0 3%;
 	border-radius: 8px;
 	box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2);
+	background-color: var(--bg-alt);
 }
 
 .container:hover {
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-.body-dark .container {
-	background-color: var(--bg-container-dark);
-}
-
-.body-light .container {
-	background-color: var(--bg-container-light);
-}
-
-.container-header {
+.container h2 {
 	font-size: 1.1rem;
-	letter-spacing: 0.08em;
+	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	padding-bottom: 0.5em;
+	margin-bottom: 0.5em;
 	cursor: pointer;
+	color: var(--fg-alt);
 }
 
-.social-link:hover {
+a {
+	line-height: 1.4;
+	text-decoration: none;
+	color: var(--fg);
+}
+
+.social-container a:hover {
 	color: var(--green);
 }
 
-.dev-link:hover {
+.dev-container a:hover {
 	color: var(--magenta);
 }
 
-.other-link:hover {
+.other-container a:hover {
 	color: var(--cyan);
 }
 
 @media (max-width: 620px) {
 	.container {
-		padding: 0.8em;
+		width: 100%;
+		padding: 0.5em;
 		margin: 0;
 		border-radius: 0;
 		box-shadow: none;
