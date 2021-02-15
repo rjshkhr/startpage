@@ -1,5 +1,7 @@
 const body = document.body;
 const themeBtn = document.querySelector('.fas');
+const getBodyTheme = localStorage.getItem('theme');
+const getBtnTheme = localStorage.getItem('btn-theme');
 
 const isLight = () => body.classList.contains('body-light');
 
@@ -24,9 +26,6 @@ const toggleLight = () => {
 const toggleTheme = () => (isLight() ? toggleDark() : toggleLight());
 
 themeBtn.addEventListener('click', toggleTheme);
-
-const getBodyTheme = localStorage.getItem('theme');
-const getBtnTheme = localStorage.getItem('btn-theme');
 
 const setBodyTheme = () => body.classList.add(getBodyTheme);
 const setBtnTheme = () => themeBtn.classList.add(getBtnTheme);
