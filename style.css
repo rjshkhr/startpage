@@ -1,10 +1,3 @@
-:root {
-	--green: #70b791;
-	--magenta: #db8e9d;
-	--yellow: #c9c76b;
-	--cyan: #78b3c5;
-}
-
 * {
 	margin: 0;
 	padding: 0;
@@ -24,6 +17,7 @@ body {
 	--bg-alt: #3e4755;
 	--fg: #f0f0f0;
 	--fg-alt: #fff;
+	--primary: #95e1d3;
 }
 
 .body-light {
@@ -31,6 +25,7 @@ body {
 	--bg-alt: #fff;
 	--fg: #444;
 	--fg-alt: #222;
+	--primary: #126e82;
 }
 
 .fas {
@@ -38,7 +33,7 @@ body {
 }
 
 .fas:hover {
-	color: var(--yellow);
+	color: var(--primary);
 }
 
 .btn-theme {
@@ -76,7 +71,6 @@ main {
 	font-size: 1.2rem;
 	text-transform: uppercase;
 	margin-bottom: 0.5em;
-	cursor: pointer;
 	color: var(--fg-alt);
 }
 
@@ -85,16 +79,8 @@ main {
 	color: var(--fg);
 }
 
-.social-container a:hover {
-	color: var(--green);
-}
-
-.dev-container a:hover {
-	color: var(--magenta);
-}
-
-.other-container a:hover {
-	color: var(--cyan);
+.container a:hover {
+	color: var(--primary);
 }
 
 @media (max-width: 880px) {
