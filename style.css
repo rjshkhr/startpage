@@ -16,20 +16,21 @@ body {
 	background-color: var(--bg);
 	color: var(--fg);
 	font-family: sans-serif;
+	line-height: 1.5;
 }
 
 .body-dark {
 	--bg: #2f3846;
 	--bg-alt: #3e4755;
-	--fg: #dee;
+	--fg: #f0f0f0;
 	--fg-alt: #fff;
 }
 
 .body-light {
-	--bg: #ddd;
-	--bg-alt: #eee;
+	--bg: #eee;
+	--bg-alt: #fff;
 	--fg: #444;
-	--fg-alt: #333;
+	--fg-alt: #222;
 }
 
 .fas {
@@ -43,11 +44,11 @@ body {
 .btn-theme {
 	position: absolute;
 	right: 0;
-	margin: 1em;
+	margin: 1.5em;
 	cursor: pointer;
 }
 
-#box {
+main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -58,29 +59,28 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 12em;
-	padding: 3em;
-	margin: 0 3%;
-	border-radius: 8px;
+	justify-content: center;
+	width: 13em;
+	height: 14em;
+	margin: 0 3em;
+	border-radius: 1em;
 	box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2);
 	background-color: var(--bg-alt);
 }
 
 .container:hover {
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .container h2 {
-	font-size: 1.1rem;
-	letter-spacing: 0.1em;
+	font-size: 1.2rem;
 	text-transform: uppercase;
 	margin-bottom: 0.5em;
 	cursor: pointer;
 	color: var(--fg-alt);
 }
 
-a {
-	line-height: 1.4;
+.container a {
 	text-decoration: none;
 	color: var(--fg);
 }
@@ -97,12 +97,22 @@ a {
 	color: var(--cyan);
 }
 
+@media (max-width: 880px) {
+	.container {
+		margin: 0 1em;
+	}
+}
+
 @media (max-width: 620px) {
 	.container {
 		width: 100%;
 		padding: 0.5em;
 		margin: 0;
 		border-radius: 0;
+		box-shadow: none;
+	}
+
+	.container:hover {
 		box-shadow: none;
 	}
 }
