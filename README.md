@@ -6,12 +6,14 @@
 
 #### Startpage -
 
-1. Clone this repository - git clone https://github.com/rajshekhar26/startpage
-2. Open firefox and go to Preferences > Home
-3. In homepage and new windows add custom URL - file:///home/raj/Projects/startpage/index.html (change the location)
-4. Go to newtab folder and open mozilla.cfg in an editor
-5. Replace file location of index.html in newTabURL variable
-6. Copy mozilla.cfg to /usr/lib/firefox/
-7. Copy local-settings.js to /usr/lib/firefox/defaults/pref/
+- Clone this repository by running the command: `git@github.com:rajshekhar26/startpage.git`
 
-If you can't find /usr/lib/firefox folder, the folder name might be different, for firefox nightly it is /usr/lib/firefox-trunk. It might even be /usr/lib64/firefox, make sure the folder exist and it contains defaults/pref folder.
+- Open Mozilla Firefox and navigate to `Preferences > Home`.
+
+- In the "Homepage and New Windows" section, add a custom URL. Use the following format but replace the file location with your own: `file:///home/yourusername/Projects/startpage/index.html`
+
+- Locate the "newtab" folder and open `mozilla.cfg` in a text editor.
+
+- In the `mozilla.cfg file`, find the `newTabURL` variable and replace the file location with the correct path to your `index.html` file.
+
+- Copy the `mozilla.cfg` file to your Firefox installation directory, typically located at `/usr/lib/firefox/`. Note that for Firefox Nightly, the directory may be named `/usr/lib/firefox-trunk/`. In some cases, it could be `/usr/lib64/firefox/`. Ensure that the folder structure includes `defaults/pref`.
