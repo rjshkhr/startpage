@@ -4,8 +4,6 @@
 
 ## <p align="center">Installation</p>
 
-#### Startpage -
-
 - Clone this repository by running the command: `git@github.com:rajshekhar26/startpage.git`
 
 - Open Mozilla Firefox and navigate to `Preferences > Home`.
