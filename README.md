@@ -8,7 +8,7 @@
 
 ## Screenshots
 
-![Screenshot](https://imgur.com/lzHNlo3.png)
+![Screenshot](https://imgur.com/NrzShQT.png)
 
 ## Installation
 
