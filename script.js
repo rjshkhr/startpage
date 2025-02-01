@@ -1,28 +1,45 @@
-const body = document.body;
-const themeBtn = document.querySelector(".fas");
-const getBodyTheme = localStorage.getItem("theme");
-const getBtnTheme = localStorage.getItem("btn-theme");
+document.addEventListener("DOMContentLoaded", () => {
+  // Clock
+  function updateClock() {
+    const now = new Date();
+    const clockTime = document.querySelector(".clock-time");
+    const clockDate = document.querySelector(".clock-date");
 
-const isLight = () => body.classList.contains("body-light");
+    if (clockTime && clockDate) {
+      const hours = String(now.getHours()).padStart(2, "0");
+      const minutes = String(now.getMinutes()).padStart(2, "0");
+      clockTime.textContent = `${hours}:${minutes}`;
 
-const addThemeClass = (bodyClass, btnClass) => {
-  body.classList.add(bodyClass);
-  themeBtn.classList.add(btnClass);
-};
+      const options = { weekday: "short", month: "short", day: "numeric" };
+      clockDate.textContent = now.toLocaleDateString("en-US", options);
+    }
+  }
 
-addThemeClass(getBodyTheme, getBtnTheme);
+  updateClock();
+  setInterval(updateClock, 1000);
 
-const setTheme = (bodyClass, btnClass) => {
-  body.classList.remove(localStorage.getItem("theme"));
-  themeBtn.classList.remove(localStorage.getItem("btn-theme"));
-  addThemeClass(bodyClass, btnClass);
-  localStorage.setItem("theme", bodyClass);
-  localStorage.setItem("btn-theme", btnClass);
-};
+  // Search
+  const searchInput = document.querySelector(".search-input");
 
-const toggleTheme = () =>
-  isLight()
-    ? setTheme("body-dark", "fa-sun")
-    : setTheme("body-light", "fa-moon");
+  searchInput.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      const query = this.value.trim();
+      if (query === "") return;
 
-themeBtn.addEventListener("click", toggleTheme);
+      const [prefix, ...searchTerms] = query.split(" ");
+      const searchTerm = searchTerms.join(" ");
+
+      const shortcuts = {
+        "y:": `https://www.youtube.com/results?search_query=${searchTerm}`,
+        "r:": `https://www.reddit.com/search?q=${searchTerm}`,
+        "gh:": `https://github.com/search?q=${searchTerm}`,
+      };
+
+      if (prefix in shortcuts && searchTerm) {
+        window.location.href = shortcuts[prefix];
+      } else {
+        window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+      }
+    }
+  });
+});

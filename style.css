@@ -1,104 +1,261 @@
+/* Reset */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	transition: 0.2s ease-in-out;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s ease-in-out;
 }
 
+/* Variables */
+:root {
+  --bg-rgb: 47, 56, 70;
+  --bg-alt-rgb: 54, 62, 76;
+  --fg-rgb: 252, 252, 252;
+  --fg-alt-rgb: 210, 210, 212;
+  --primary-rgb: 131, 154, 236;
+  --secondary-rgb: 226, 132, 121;
+  --tertiary-rgb: 112, 183, 145;
+
+  --bg: rgb(var(--bg-rgb));
+  --bg-alt: rgb(var(--bg-alt-rgb));
+  --fg: rgb(var(--fg-rgb));
+  --fg-alt: rgb(var(--fg-alt-rgb));
+  --primary: rgb(var(--primary-rgb));
+  --secondary: rgb(var(--secondary-rgb));
+  --tertiary: rgb(var(--tertiary-rgb));
+}
+
+/* Base styles */
 body {
-	background-color: var(--bg);
-	color: var(--fg);
-	font-family: sans;
-	line-height: 1.5;
-}
-
-.body-dark {
-	--bg: #2f3846;
-	--bg-alt: #3e4755;
-	--fg: #f0f0f0;
-	--fg-alt: #fff;
-	--primary: #95e1d3;
-}
-
-.body-light {
-	--bg: #eee;
-	--bg-alt: #fff;
-	--fg: #444;
-	--fg-alt: #222;
-	--primary: #126e82;
-}
-
-.fas {
-	font-size: 1.5rem;
-}
-
-.fas:hover {
-	color: var(--primary);
-}
-
-.btn-theme {
-	position: absolute;
-	right: 0;
-	margin: 1.5em;
-	cursor: pointer;
+  background-color: var(--bg-alt);
+  color: var(--fg);
+  font-family: "CaskaydiaCove Nerd Font" sans-serif;
+  line-height: 1.5;
 }
 
 main {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4em;
+  gap: 3em;
 }
 
+/* Container styles */
 .container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 13em;
-	height: 14em;
-	margin: 0 3em;
-	border-radius: 1em;
-	box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2);
-	background-color: var(--bg-alt);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 16em;
+  padding: 2em 1em;
+  border-radius: 1em;
+  background-color: var(--bg);
+  box-shadow: 0 3px 8px -4px rgba(0, 0, 0, 0.15);
 }
 
 .container:hover {
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px -6px rgba(0, 0, 0, 0.2);
 }
 
+/* Headings */
 .container h2 {
-	font-size: 1.2rem;
-	text-transform: uppercase;
-	margin-bottom: 0.5em;
-	color: var(--fg-alt);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 0.6em;
+  font-weight: 700;
 }
 
+.social-container h2 {
+  color: var(--primary);
+}
+.dev-container h2 {
+  color: var(--secondary);
+}
+.general-container h2 {
+  color: var(--tertiary);
+}
+
+/* Links */
 .container a {
-	text-decoration: none;
-	color: var(--fg);
+  width: 100%;
+  padding: 0.3em;
+  margin: 0.2em 0;
+  color: var(--fg);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 0.5em;
+  position: relative;
+  z-index: 1;
 }
 
-.container a:hover {
-	color: var(--primary);
+.container a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  border-radius: 0.5em;
+  transition: 0.2s ease-in-out;
 }
 
+.container a:hover::before {
+  width: 100%;
+}
+
+.social-container a:hover::before {
+  background: rgba(var(--primary-rgb), 0.05);
+}
+
+.dev-container a:hover::before {
+  background: rgba(var(--secondary-rgb), 0.05);
+}
+
+.general-container a:hover::before {
+  background: rgba(var(--tertiary-rgb), 0.05);
+}
+
+.social-container a:hover {
+  color: var(--primary);
+}
+
+.dev-container a:hover {
+  color: var(--secondary);
+}
+
+.general-container a:hover {
+  color: var(--tertiary);
+}
+
+/* Clock */
+.clock {
+  text-align: center;
+  margin-top: 4em;
+}
+
+.clock-time {
+  font-size: 5rem;
+  font-weight: 500;
+  letter-spacing: 4px;
+}
+
+.clock-date {
+  font-size: 1.2rem;
+  margin-top: 0.3em;
+  letter-spacing: 2px;
+}
+
+/* Search */
+.search {
+  position: relative;
+  width: 550px;
+  margin: 3em auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.8em 1.2em;
+  font-size: 1.1rem;
+  color: var(--fg);
+  background: var(--bg);
+  border: none;
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 3px 8px -4px rgba(0, 0, 0, 0.15);
+}
+
+.search-input:hover {
+  box-shadow: 0 4px 12px -6px rgba(0, 0, 0, 0.2);
+}
+
+.search-input:focus {
+  background: linear-gradient(
+    145deg,
+    var(--bg),
+    rgba(var(--primary-rgb), 0.05)
+  );
+}
+
+.search-input::placeholder {
+  color: var(--fg-alt);
+  opacity: 0.7;
+}
+
+/* Shortcuts */
+.shortcut-hints {
+  position: absolute;
+  top: calc(100% + 0.8em);
+  left: 0;
+  right: 0;
+  padding: 0.8em;
+  background: var(--bg);
+  border-radius: 1em;
+  display: none;
+  flex-wrap: wrap;
+  gap: 0.8em;
+  justify-content: center;
+  box-shadow: 0 3px 8px -4px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.shortcut-hints span {
+  padding: 0.5em 0.8em;
+  font-size: 0.9rem;
+  border-radius: 0.5em;
+  background: linear-gradient(
+    145deg,
+    var(--bg),
+    rgba(var(--primary-rgb), 0.05)
+  );
+}
+
+.search-input:focus ~ .shortcut-hints {
+  display: flex;
+}
+
+/* Icon styles */
+.container a i {
+  margin-right: 0.5em;
+  width: 1.2em; /* Makes icons align better */
+}
+
+.container h2 i {
+  margin-right: 0.5em;
+}
+
+.search-icon {
+  position: absolute;
+  right: 1.2em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--fg-alt);
+  opacity: 0.7;
+}
+
+.shortcut-hints span i {
+  margin-right: 0.4em;
+  width: 1.2em;
+}
+
+.clock-date i {
+  margin-right: 0.5em;
+}
+
+/* Media queries */
 @media (max-width: 880px) {
-	.container {
-		margin: 0 1em;
-	}
-}
+  main {
+    flex-direction: column;
+    padding: 2em 1em;
+    gap: 2em;
+  }
 
-@media (max-width: 620px) {
-	.container {
-		width: 100%;
-		padding: 0.5em;
-		margin: 0;
-		border-radius: 0;
-		box-shadow: none;
-	}
+  .container {
+    width: 100%;
+  }
 
-	.container:hover {
-		box-shadow: none;
-	}
+  .search {
+    width: 90%;
+  }
 }

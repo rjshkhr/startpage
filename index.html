@@ -1,42 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="startpage for firefox" />
-		<meta name="keywords" content="startpage, firefox, browser" />
-		<script
-			src="https://kit.fontawesome.com/e7dc570521.js"
-			crossorigin="anonymous"
-		></script>
-		<link rel="stylesheet" type="text/css" href="style.css" />
-		<title>Startpage</title>
-	</head>
-	<body class="body-dark">
-		<div class="btn-theme"><i class="fas fa-moon"></i></div>
-		<main>
-			<div class="container social-container">
-				<h2>Social</h2>
-				<a href="https://mail.tutanota.com/login">Tutanota</a>
-				<a href="https://www.protonmail.com">ProtonMail</a>
-				<a href="https://www.youtube.com">YouTube</a>
-				<a href="https://www.reddit.com">Reddit</a>
-			</div>
-			<div class="container dev-container">
-				<h2>Dev</h2>
-				<a href="https://www.udemy.com">Udemy</a>
-				<a href="https://www.coursera.org">Coursera</a>
-				<a href="https://www.freecodecamp.org/learn">FCC</a>
-				<a href="https://www.github.com">Github</a>
-			</div>
-			<div class="container other-container">
-				<h2>Other</h2>
-				<a href="https://www.wallhaven.cc">Wallhaven</a>
-				<a href="https://wiki.gentoo.org">Gentoo</a>
-				<a href="https://wiki.archlinux.org">ArchWiki</a>
-				<a href="https://www.unsplash.com">Unsplash</a>
-			</div>
-		</main>
-		<script src="script.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="startpage for firefox" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Startpage</title>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="clock-time"></div>
+      <div class="clock-date"><i class="far fa-calendar-alt"></i></div>
+    </div>
+    <div class="search">
+      <input type="text" class="search-input" placeholder="Search..." />
+      <i class="fas fa-search search-icon"></i>
+      <div class="shortcut-hints">
+        <span><i class="fab fa-youtube"></i> y: YouTube</span>
+        <span><i class="fab fa-reddit"></i> r: Reddit</span>
+        <span><i class="fab fa-github"></i> gh: GitHub</span>
+      </div>
+    </div>
+    <main>
+      <div class="container general-container">
+        <h2><i class="fas fa-tools"></i> General</h2>
+        <a href="https://claude.ai"><i class="fas fa-robot"></i> Claude</a>
+        <a href="https://www.youtube.com"
+          ><i class="fab fa-youtube"></i> YouTube</a
+        >
+        <a href="https://mail.google.com"
+          ><i class="fas fa-envelope"></i> Gmail</a
+        >
+      </div>
+      <div class="container social-container">
+        <h2><i class="fas fa-users"></i> Social</h2>
+        <a href="https://x.com/home"
+          ><i class="fa-brands fa-x-twitter"></i> X</a
+        >
+        <a href="https://www.reddit.com"
+          ><i class="fab fa-reddit"></i> Reddit</a
+        >
+        <a href="https://web.whatsapp.com"
+          ><i class="fab fa-whatsapp"></i>WhatsApp</a
+        >
+      </div>
+      <div class="container dev-container">
+        <h2><i class="fas fa-code"></i> Dev</h2>
+        <a href="https://github.com"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://wiki.archlinux.org"
+          ><i class="fas fa-terminal"></i> Arch Wiki</a
+        >
+        <a href="https://stackoverflow.com/questions"
+          ><i class="fab fa-stack-overflow"></i> Stack Overflow</a
+        >
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
