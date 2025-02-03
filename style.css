@@ -8,13 +8,13 @@
 
 /* Variables */
 :root {
-  --bg-rgb: 47, 56, 70;
-  --bg-alt-rgb: 54, 62, 76;
-  --fg-rgb: 252, 252, 252;
-  --fg-alt-rgb: 210, 210, 212;
-  --primary-rgb: 131, 154, 236;
-  --secondary-rgb: 226, 132, 121;
-  --tertiary-rgb: 112, 183, 145;
+  --bg-rgb: 28, 34, 39; /* #1C2227 */
+  --bg-alt-rgb: 36, 43, 49; /* #242B31 */
+  --fg-rgb: 229, 231, 235; /* #E5E7EB */
+  --fg-alt-rgb: 205, 211, 220; /* #CDD3DC */
+  --primary-rgb: 126, 154, 171; /* #7E9AAB */
+  --secondary-rgb: 184, 142, 126; /* #B88E7E */
+  --tertiary-rgb: 149, 176, 136; /* #95B088 */
 
   --bg: rgb(var(--bg-rgb));
   --bg-alt: rgb(var(--bg-alt-rgb));
@@ -29,7 +29,7 @@
 body {
   background-color: var(--bg-alt);
   color: var(--fg);
-  font-family: "CaskaydiaCove Nerd Font" sans-serif;
+  font-family: sans-serif;
   line-height: 1.5;
 }
 
@@ -46,7 +46,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 16em;
+  width: 15em;
   padding: 2em 1em;
   border-radius: 1em;
   background-color: var(--bg);

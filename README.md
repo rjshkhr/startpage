@@ -6,10 +6,6 @@
 
 </div>
 
-## Screenshots
-
-![Screenshot](https://imgur.com/NrzShQT.png)
-
 ## Installation
 
 - Clone this repository by running the command: `git@github.com:rjshkhr/startpage.git`
