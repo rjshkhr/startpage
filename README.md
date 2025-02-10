@@ -2,9 +2,13 @@
 
 # Firefox Startpage
 
-[![Stars](https://img.shields.io/github/stars/rjshkhr/dotfiles?style=for-the-badge&logo=github&color=839AEC&logoColor=fcfcfc&labelColor=212630)](https://github.com/rjshkhr/dotfiles/stargazers) [![Forks](https://img.shields.io/github/forks/rjshkhr/dotfiles?style=for-the-badge&logo=github&color=70B791&logoColor=fcfcfc&labelColor=212630)](https://github.com/rjshkhr/dotfiles/network/members) [![Issues](https://img.shields.io/github/issues/rjshkhr/dotfiles?style=for-the-badge&logo=gitbook&color=E28479&logoColor=fcfcfc&labelColor=212630)](https://github.com/rjshkhr/dotfiles/issues)
+[![Stars](https://img.shields.io/github/stars/rjshkhr/startpage?style=for-the-badge&logo=github&color=7E9AAB&logoColor=fcfcfc&labelColor=242B2D)](https://github.com/rjshkhr/startpage/stargazers) [![Forks](https://img.shields.io/github/forks/rjshkhr/startpage?style=for-the-badge&logo=github&color=96B088&logoColor=fcfcfc&labelColor=242B2D)](https://github.com/rjshkhr/startpage/network/members) [![Issues](https://img.shields.io/github/issues/rjshkhr/startpage?style=for-the-badge&logo=gitbook&color=BC8F7D&logoColor=fcfcfc&labelColor=242B2D)](https://github.com/rjshkhr/startpage/issues)
 
 </div>
+
+## Screenshots
+
+![Screenshot](https://imgur.com/rbBWFDL.png)
 
 ## Installation
 

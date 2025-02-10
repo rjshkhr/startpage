@@ -8,13 +8,13 @@
 
 /* Variables */
 :root {
-  --bg-rgb: 28, 34, 39; /* #1C2227 */
-  --bg-alt-rgb: 36, 43, 49; /* #242B31 */
-  --fg-rgb: 229, 231, 235; /* #E5E7EB */
-  --fg-alt-rgb: 205, 211, 220; /* #CDD3DC */
+  --bg-rgb: 29, 35, 38; /* #1D2326 */
+  --bg-alt-rgb: 36, 43, 45; /* #242B2D */
+  --fg-rgb: 230, 231, 230; /* #E6E7E6 */
+  --fg-alt-rgb: 206, 211, 220; /* #CED3DC */
   --primary-rgb: 126, 154, 171; /* #7E9AAB */
-  --secondary-rgb: 184, 142, 126; /* #B88E7E */
-  --tertiary-rgb: 149, 176, 136; /* #95B088 */
+  --secondary-rgb: 188, 143, 125; /* #BC8F7D */
+  --tertiary-rgb: 150, 176, 136; /* #96B088 */
 
   --bg: rgb(var(--bg-rgb));
   --bg-alt: rgb(var(--bg-alt-rgb));
