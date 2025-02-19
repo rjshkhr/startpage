@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       clockTime.textContent = `${hours}:${minutes}`;
 
       const options = { weekday: "short", month: "short", day: "numeric" };
-      clockDate.textContent = now.toLocaleDateString("en-US", options);
+      clockDate.textContent = now.toLocaleDateString(undefined, options);
     }
   }
 
